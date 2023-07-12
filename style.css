@@ -24,6 +24,8 @@
     overflow: hidden;
     background-color: var(--anti-flash-white);
     box-shadow: 0px 1px 48px #10181971;
+    z-index: 1;
+    top: 0;
 }
 
 .navbar li {
@@ -49,4 +51,34 @@
 
 .navbar li:last-child {
     margin-right: 35px;
+}
+
+.content {
+    margin-top: 150px; /* Ajusta el margen superior del div sin afectar el ul */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido del div */
+    align-items: center;
+}
+
+.grid-container {
+    width: 90%;
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.content img {
+    width: 64%;
+    border-radius: 12px;
+    justify-self: center;
+    align-self: center;
+}
+
+.grid-container .personal-information {
+    align-self: center;
+}
+
+.personal-information .welcome::first-line {
+    color: var(--raisin-black);
+    font-weight: 300;
 }
