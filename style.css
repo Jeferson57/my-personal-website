@@ -1,6 +1,7 @@
 :root {
     --anti-flash-white: #E6EEEF;
     --raisin-black: #252525;
+    --beaver: #937062;
 }
 
 * {
@@ -40,6 +41,7 @@
     /* padding: 0px 55px; */
     text-decoration: none;
     cursor: pointer;
+    transition: background-color 0.4s;
 }
 
 .navbar li:hover {
@@ -54,7 +56,7 @@
 }
 
 .content {
-    margin-top: 150px; /* Ajusta el margen superior del div sin afectar el ul */
+    margin-top: 120px; /* Ajusta el margen superior del div sin afectar el ul */
     display: flex;
     justify-content: center; /* Centra horizontalmente el contenido del div */
     align-items: center;
@@ -62,13 +64,13 @@
 
 .grid-container {
     width: 90%;
-    height: 40vh;
+    height: 60vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
 .content img {
-    width: 64%;
+    width: 54%;
     border-radius: 12px;
     justify-self: center;
     align-self: center;
@@ -78,7 +80,45 @@
     align-self: center;
 }
 
+.personal-information .welcome {
+    color: var(--raisin-black)
+}
+
+.personal-information .welcome span {
+    color: var(--beaver);
+}
+
 .personal-information .welcome::first-line {
     color: var(--raisin-black);
-    font-weight: 300;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.personal-information .welcome img {
+    width: 24px;
+}
+
+.personal-information .presentation {
+    font-size: 15px;
+    max-width: 420px;
+    margin-top: 12px;
+}
+
+.personal-information .github-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--raisin-black);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    margin-top: 24px;
+}
+
+.personal-information .github-button:hover {
+    background-color: #555;
+}
+
+.personal-information .github-button:active {
+    background-color: #111;
 }
