@@ -23,8 +23,9 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: var(--anti-flash-white);
-    box-shadow: 0px 1px 48px #10181971;
+    /* background-color: var(--anti-flash-white); */
+    background: linear-gradient(0.25turn, #87665A, #BEA59D);
+    box-shadow: 0px 1px 48px var(--beaver);
     z-index: 1;
     top: 0;
 }
@@ -33,10 +34,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 110px;
-    height: 32px;
+    width: 120px;
+    height: 38px;
     /* display: block; */
-    color: var(--raisin-black);
+    color: var(--anti-flash-white);
     text-align: center;
     /* padding: 0px 55px; */
     text-decoration: none;
@@ -47,11 +48,19 @@
 .navbar li:hover {
     /* border: 2px solid black; */
     border-radius: 12px;
-    background-color: rgb(219, 219, 219);
+    background-color: var(--anti-flash-white);
+    color: var(--raisin-black);
     /* color: white; */
 }
 
 .navbar li:last-child {
+    display: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.navbar li img {
+    width: 17px;
+    margin-right: 6px;
     display: none;
 }
 
@@ -85,7 +94,11 @@
 }
 
 .personal-information .welcome span {
-    color: var(--beaver);
+    background: #87665A;
+    background: linear-gradient(to right, #87665A 0%, #BEA59D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
 }
 
 .personal-information .welcome::first-line {
