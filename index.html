@@ -6,7 +6,9 @@
     <title>Jeferson</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width: 768px)">
 
     <!-- Google Fonts -->
     <link 
@@ -32,16 +34,23 @@
 </head>
 <body>
     <ul class="navbar" id="navbar">
-        <li><img src="./icons/house-solid.svg" alt=""><a href="#inicio"></a>Home</li>
-        <li><img src="./icons/user-solid.svg" alt=""><a href="#acerca"></a>About</li>
-        <li><img src="./icons/folder-solid.svg" alt=""><a href="#proyectos"></a>Projects</li>
-        <li><img src="./icons/envelope-solid.svg" alt=""><a href="#contacto"></a>Contact</li>
-        <li class="hamburger"><img src="./icons/bars-solid.svg" alt=""></li>
+        <li><img class="icons" src="./icons/house-solid.svg" alt=""><a href="#inicio"></a>Home</li>
+        <li><img class="icons" src="./icons/user-solid.svg" alt=""><a href="#acerca"></a>About</li>
+        <li><img class="icons" src="./icons/folder-solid.svg" alt=""><a href="#proyectos"></a>Projects</li>
+        <li><img class="icons" src="./icons/envelope-solid.svg" alt=""><a href="#contacto"></a>Contact</li>
+        <div class="hamburger">
+            <span class="icon-menu">
+                <img src="./icons/bars-solid.svg" alt="">
+            </span>
+            <span class="icon-close">
+                <img src="./icons/xmark-solid.svg" alt="">
+            </span>
+        </div>
     </ul>
     <main>
         <div class="content">
             <div class="grid-container">
-                <img src="./images/profile-picture.jpg" alt="">
+                <img class="profile-picture" src="./images/profile-picture.jpg" alt="">
                 <div class="personal-information">
                     <h1 class="welcome">
                         Hi there <img src="./images/hello.png" alt=""> <br>   

@@ -1,0 +1,42 @@
+.navbar {
+    position: fixed;
+    justify-content: center;
+    column-gap: 30px;
+}
+
+.navbar li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 38px;
+    /* display: block; */
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+.navbar li:hover {
+    /* border: 2px solid black; */
+    border-radius: 12px;
+    background-color: var(--anti-flash-white);
+    color: var(--raisin-black);
+    /* color: white; */
+}
+
+.navbar li:last-child {
+    display: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.grid-container {
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.personal-information .github-button:hover {
+    background-color: #555;
+}
+
+.personal-information .github-button:active {
+    background-color: #111;
+}
