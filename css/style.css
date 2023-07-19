@@ -40,11 +40,11 @@
     margin-right: 18px;
 }
 
-.navbar li:not(.hamburger) {
+.navbar li {
     display: none; /* Oculta los elementos de la lista, excepto el último (hamburger) */
 }
 
-.navbar .hamburger{
+.hamburger {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,25 +54,32 @@
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 100;
 }
 
-.navbar .hamburger .icon-menu {
+.hamburger .icon-menu {
     display: block;
     width: 25px;
+    transition: opacity 0.4s ease-in-out;
+    opacity: 1;
 }
 
-.navbar .hamburger .icon-close {
+.hamburger .icon-close {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.hamburger.open .icon-menu {
+    opacity: 0;
     display: none;
 }
 
-.navbar .hamburger.open .icon-menu {
-    display: none;
+.hamburger.open .icon-close {
+    opacity: 1;
+    width: 25px;
+    display: block;
 }
 
-.navbar .hamburger.open .icon-close {
-    display: block;
-    width: 25px;
-}
 
 .navbar.open {
     position: fixed;
@@ -90,7 +97,7 @@
     overflow: auto;
 }
 
-.navbar.open li:not(.hamburger) {
+.navbar.open li {
     display: flex;
     align-items: center;
     flex-direction: row;
