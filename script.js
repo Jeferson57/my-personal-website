@@ -22,3 +22,9 @@ iconClose.addEventListener('click', function() {
   navbar.classList.remove('open');
   hamburger.classList.toggle('open');
 });
+
+// Agregar un enlace al botón para descargar el CV
+document.querySelector(".download-cv-btn").addEventListener("click", function() {
+  // Reemplaza "ruta-a-tu-cv.pdf" con la ruta correcta de tu CV
+  window.open("./CV.pdf", "_blank");
+});

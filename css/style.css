@@ -78,6 +78,7 @@
     opacity: 1;
     width: 25px;
     display: block;
+    position: fixed;
 }
 
 
@@ -120,36 +121,36 @@
 }
 
 
-.content {
+.container {
     margin-top: 62px; /* Ajusta el margen superior del div sin afectar el ul */
     display: flex;
     justify-content: center; /* Centra horizontalmente el contenido del div */
     align-items: center;
 }
 
-.content .grid-container {
+.container .grid-container {
     width: 90%;
-    height: 60vh;
+    /* height: 60vh; */
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
 }
 
-.content .grid-container > * {
+.container .grid-container > * {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.content .grid-container .profile-picture {
+.grid-container .profile-picture {
     width: 54%;
     border-radius: 12px;
     justify-self: center;
     align-self: center;
 }
 
-.content .grid-container .personal-information .welcome {
+.grid-container .personal-information .welcome {
     color: var(--raisin-black);
 }
 
@@ -163,7 +164,7 @@
     width: 24px;
 }
 
-.content .grid-container .personal-information .welcome span {
+.grid-container .personal-information .welcome span {
     background: #87665A;
     background: linear-gradient(to right, #87665A 0%, #BEA59D 100%);
     -webkit-background-clip: text;
@@ -171,7 +172,7 @@
     font-weight: 800;
 }
 
-.content .grid-container > .personal-information {
+.grid-container > .personal-information {
     align-self: center;
     margin-top: 22px;
     display: flex;
@@ -181,23 +182,127 @@
     gap: 12px;
 }
 
-.content .grid-container .personal-information h1, .personal-information .presentation {
+.grid-container .personal-information h1, .personal-information .presentation {
     text-align: center;
     margin-top: 0;
     max-width: 330px;
 }
 
-.content .grid-container .personal-information .presentation {
+.grid-container .personal-information .presentation {
     font-size: 15px;
     max-width: 420px;
 }
 
-.content .grid-container .github-button {
+.grid-container .github-button {
+    width: 130px;
+    height: 42px;
     display: inline-block;
     padding: 10px 20px;
     background-color: var(--raisin-black);
     color: #fff;
     text-decoration: none;
+    font-size: 14px;
     border-radius: 8px;
     transition: background-color 0.3s;
 }
+
+#about .container {
+    flex-direction: column;
+}
+
+.container .about-content .about-image {
+    display: flex;
+    justify-content: center;
+}
+
+.container .profile-picture-two {
+    /* display: none; */
+    width: 50%;
+    align-self: center;
+    border-radius: 12px;
+}
+
+.about-text {
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+
+.container .about-text h2{
+    text-align: center;
+    margin-top: 22px;
+}
+
+.container .about-text p {
+    text-align: center;
+    max-width: 330px;
+    margin: auto;
+    margin-top: 12px;
+}
+
+/* Estilos para el botón */
+.about-text .download-cv-btn {
+    width: auto;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #87665A;
+    color: #FFF;
+    padding: 12px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 12px;
+    text-transform: uppercase;
+  }
+  
+.about-text .download-cv-btn:hover {
+    background-color: #BEA59D;
+}
+
+.about-text .download-cv-btn img {
+    width: 20px;
+    margin-left: 12px;
+}
+  
+
+.container h3 {
+    margin-top: 22px;
+}
+
+.container .skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 12px;
+    width: 74%;
+    border: solid 2px var(--raisin-black);
+    padding: 14px 8px;
+    border-radius: 12px;
+    margin-top: 12px;
+}
+
+.container .skills-list li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 8px;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+}
+
+.container .skills-list li img {
+    width: 24px;
+}
+
+.container .skills-list li.centered {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
