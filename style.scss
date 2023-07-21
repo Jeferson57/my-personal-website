@@ -1,0 +1,77 @@
+// Definición de variables
+$primary-color: #1A73E8;
+$secondary-color: #BEA59D;
+
+// Estilos para la sección de proyectos
+.projects {
+  padding: 50px 0;
+
+  h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: $primary-color;
+  }
+
+  .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+
+    li {
+      .project-item {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+
+        img {
+          width: 100%;
+          border-radius: 8px;
+          margin-bottom: 10px;
+        }
+
+        h3 {
+          font-size: 18px;
+          color: $primary-color;
+          margin-bottom: 10px;
+        }
+
+        .tags {
+          list-style: none;
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          margin-bottom: 15px;
+
+          li {
+            background-color: $secondary-color;
+            padding: 6px 12px;
+            border-radius: 4px;
+            color: #fff;
+          }
+        }
+
+        .buttons {
+          display: flex;
+          justify-content: center;
+          gap: 15px;
+
+          .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: $primary-color;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+
+            &:hover {
+              background-color: darken($primary-color, 10%);
+            }
+          }
+        }
+      }
+    }
+  }
+}

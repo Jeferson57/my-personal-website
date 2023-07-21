@@ -1,0 +1,62 @@
+.projects {
+  padding: 50px 0;
+}
+.projects h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1A73E8;
+}
+.projects .project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.projects .project-list li .project-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+.projects .project-list li .project-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.projects .project-list li .project-item h3 {
+  font-size: 18px;
+  color: #1A73E8;
+  margin-bottom: 10px;
+}
+.projects .project-list li .project-item .tags {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.projects .project-list li .project-item .tags li {
+  background-color: #BEA59D;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: #fff;
+}
+.projects .project-list li .project-item .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.projects .project-list li .project-item .buttons .button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1A73E8;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+.projects .project-list li .project-item .buttons .button:hover {
+  background-color: #135cbc;
+}
+
+/*# sourceMappingURL=style.css.map */
