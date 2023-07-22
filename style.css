@@ -1,3 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 52px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(0.25turn, #87665A, #BEA59D);
+  box-shadow: 0px 1px 48px var(--beaver);
+  z-index: 1;
+  top: 0;
+  position: relative;
+}
+.navbar li {
+  display: none;
+  color: var(--anti-flash-white);
+  text-align: center;
+  /* padding: 0px 55px; */
+  text-decoration: none;
+}
+.navbar li .icons {
+  width: 24px;
+  margin-right: 18px;
+}
+
+.navbar.open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--anti-flash-white);
+  z-index: 100;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: auto;
+}
+.navbar.open li {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  right: 0;
+  margin-bottom: 32px;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(20px);
+  }
+}
+.hamburger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+.hamburger .icon-menu {
+  display: block;
+  width: 25px;
+  transition: opacity 0.4s ease-in-out;
+  opacity: 1;
+}
+.hamburger .icon-close {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.hamburger.open .icon-menu {
+  opacity: 0;
+  display: none;
+}
+
+.hamburger.open .icon-close {
+  opacity: 1;
+  width: 25px;
+  display: block;
+  position: fixed;
+}
+
+.container {
+  margin-top: 62px; /* Ajusta el margen superior del div sin afectar el ul */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente el contenido del div */
+  align-items: center;
+}
+.container .grid-container {
+  width: 90%;
+  /* height: 60vh; */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+}
+.container .grid-container .grid-container > .personal-information {
+  align-self: center;
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.container .grid-container .profile-picture {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 54%;
+  border-radius: 12px;
+  justify-self: center;
+  align-self: center;
+}
+.container .grid-container .personal-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.container .grid-container .personal-information .welcome {
+  color: var(--raisin-black);
+  text-align: center;
+  margin-top: 0;
+  max-width: 330px;
+}
+.container .grid-container .personal-information .welcome img {
+  width: 24px;
+}
+.container .grid-container .personal-information .welcome span {
+  background: #87665A;
+  background: linear-gradient(to right, #87665A 0%, #BEA59D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+.container .grid-container .personal-information .welcome::first-line {
+  color: var(--raisin-black);
+  font-size: 22px;
+  font-weight: 500;
+}
+.container .grid-container .personal-information .presentation {
+  text-align: center;
+  margin-top: 0;
+  max-width: 330px;
+  font-size: 15px;
+}
+.container .grid-container .personal-information .github-button {
+  width: 130px;
+  height: 42px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #252525;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+.container .grid-container .personal-information .github-button:hover {
+  background-color: #555;
+}
+.container .grid-container .personal-information .github-button:active {
+  background-color: #111;
+}
+
 .projects {
   padding: 50px 0;
 }
