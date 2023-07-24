@@ -23,14 +23,14 @@ $beaver: #937062;
   padding: 0;
   overflow: hidden;
   background: linear-gradient(0.25turn, #87665A, #BEA59D);
-  box-shadow: 0px 1px 48px var(--beaver);
+  box-shadow: 0px 1px 48px $beaver;
   z-index: 1;
   top: 0;
   position: relative;
 
   li {
     display: none;
-    color: var(--anti-flash-white);
+    color: $anti-flash-white;
     text-align: center;
     /* padding: 0px 55px; */
     text-decoration: none;
@@ -187,7 +187,7 @@ $beaver: #937062;
       .presentation {
         text-align: center;
         margin-top: 0;
-        max-width: 330px;
+        max-width: 310px;
         font-size: 15px;
       }
 
@@ -210,6 +210,109 @@ $beaver: #937062;
       
       .github-button:active {
           background-color: #111;
+      }
+    }
+  }
+}
+
+#about {
+  .container {
+    flex-direction: column;
+
+    .about-content {
+      .about-image {
+        display: flex;
+        justify-content: center;
+      }
+
+      .about-text {
+        display: grid;
+        place-items: center;
+        text-align: center;
+
+        h2 {
+          text-align: center;
+          margin-top: 22px;
+        }
+
+        p {
+          text-align: center;
+          max-width: 310px;
+          margin: auto;
+          margin-top: 12px;
+        }
+
+        .download-cv-btn {
+          width: auto;
+          height: 42px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #87665A;
+          color: #FFF;
+          padding: 12px 20px;
+          font-size: 14px;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          margin-top: 12px;
+          text-transform: uppercase;
+
+          img {
+            width: 20px;
+            margin-left: 12px;
+          }
+        }
+
+        .download-cv-btn:hover {
+          background-color: #BEA59D;
+        }
+      }
+    }
+
+    .profile-picture-two {
+      /* display: none; */
+      width: 50%;
+      align-self: center;
+      border-radius: 12px;
+    }
+
+    h3 {
+      margin-top: 22px;
+    }
+
+    .skills-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(4, auto);
+      gap: 12px;
+      width: 74%;
+      border: solid 2px $raisin-black;
+      border-radius: 12px;
+      padding: 14px 8px;
+      margin-top: 12px;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 8px;
+        list-style: none;
+        text-decoration: none;
+        text-align: center;
+
+        img {
+          width: 24px;
+        }
+      }
+
+      .centered {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
       }
     }
   }
